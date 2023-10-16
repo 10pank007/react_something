@@ -1,10 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import FirstComponent from "./components/first-component/FirstComponent";
 
 function App() {
   return (
     <div className="App">
-      Hello world!!! Ukraine win war in 2023
+      <FirstComponent/>
+      <FirstComponent/>
+      <FirstComponent/>
     </div>
   );
 }
