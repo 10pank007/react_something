@@ -7,12 +7,16 @@ import {MainPage} from "./pages/main-page/MainPage";
 import {ErrorPage} from "./pages/error-page/ErrorPage";
 import {UsersPage} from "./pages/users-page/UsersPage";
 import {PostsPage} from "./pages/posts-page/PostsPage";
+import {UserDetailsPage} from "./pages/user-details-page/UserDetailsPage";
+import {PostsDetailsPage} from "./pages/posts-details-page/PostsDetailsPage";
 
 
 const routes = createBrowserRouter([
     {path: "/", element: <MainPage/>, errorElement: <ErrorPage/>, children: [
             {path:"users", element:<UsersPage/>},
-            {path:"posts", element:<PostsPage/>}
+            {path:"users/details", element:<UserDetailsPage/>},
+            {path:"posts", element:<PostsPage/>},
+            {path:"posts/details", element:<PostsDetailsPage/>},
         ]},
     {path: "/asd", element: <h1>hello2</h1>},
 ])
