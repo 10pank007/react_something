@@ -2,6 +2,7 @@ import {Component} from "react";
 
 class Test extends Component {
     constructor(props) {
+        console.log("constructor");
         super(props);
         this.inc = this.inc.bind(this);
         this.state = {
@@ -9,10 +10,23 @@ class Test extends Component {
         }
     }
 
+    componentDidMount() {
+        console.log("componentDidMount");
+    }
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        console.log(prevState)
+        console.log("componentDidUpdate")
+    }
+
+    componentWillUnmount() {
+        console.log("componentWillUnmount");
+    }
+
     inc() {
         this.setState(prev => ({a: prev.a + 1}));
     }
     render() {
+        console.log("render");
         return (
             <div>
                 <div>Hello from class component</div>
